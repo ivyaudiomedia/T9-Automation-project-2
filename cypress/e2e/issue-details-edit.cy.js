@@ -7,6 +7,8 @@ describe('Issue details editing', () => {
     });
   });
 
+ 
+
   it('Should update type, status, assignees, reporter, priority successfully', () => {
     getIssueDetailsModal().within(() => {
       cy.get('[data-testid="select:type"]').click('bottomRight');
@@ -62,4 +64,21 @@ describe('Issue details editing', () => {
   });
 
   const getIssueDetailsModal = () => cy.get('[data-testid="modal:issue-details"]');
-});
+  let selectedPriorityValues = []
+
+
+  const expectedLength = 5 
+  let emptyArray = []
+
+  it.only('should check"Priority" dropdown', () => {
+    
+    getTimeWindow().within(() => {
+      cy.get('data-testid="select:priority"')
+      
+  })
+
+  
+    
+
+  })
+})
